@@ -60,3 +60,7 @@ The following commands have been included to make NPC stat blocks easier. Note t
 ### Genesys Tables ###
 
 The `\begin{GenesysTable}`  requires one argument: the table setup, using the `tabu` package. It sets the fonts and the header row background color. After the first row be sure to use the `\RowColors` command to get the alternating white/blue colors for the table rows.
+
+## Example ##
+
+![Sample image](sample.png)

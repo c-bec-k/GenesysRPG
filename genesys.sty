@@ -21,6 +21,7 @@
 \RequirePackage[sc]{titlesec}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{tabularx}
+\RequirePackage{enumitem}
 
 \usetikzlibrary{positioning,shapes}
 
@@ -45,7 +46,7 @@
 %%%%%
 
 \DeclareOption{background}{
-\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{genesysbg.png}}
+\AddToShipoutPictureBG{\includegraphics[width=\paperwidth,height=\paperheight]{genesysbg.png}}
 }%
 
 

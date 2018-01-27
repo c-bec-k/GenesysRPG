@@ -1,0 +1,57 @@
+\documentclass[11pt]{book}
+
+\usepackage[background]{Genesys}
+
+\begin{document}
+
+\chapter{Sample Document}
+
+This is a sample document for the \emph{Genesys} \LaTeX package. Please see below for the various commands.
+
+\section{Dice}
+
+All dice types have their own commands:
+
+\begin{itemize}[noitemsep,nolistsep]
+\item \verb|\BoostDie| produces \BoostDie
+\item \verb|\AbilityDie| produces \AbilityDie
+\item \verb|\ProficiencyDie| produces \ProficiencyDie
+\item \verb|\SetbackDie| produces \SetbackDie
+\item \verb|\DifficultyDie| produces \DifficultyDie
+\item \verb|\ChallengeDie| produces \ChallengeDie
+\end{itemize}
+
+\vspace{1em}
+
+And we all know that \BoostDie\AbilityDie\ and \ProficiencyDie give us good symbols: \Advantage\Success\ and \Triumph. Sadly, bad dice give us the negative symbols: \Threat\Failure\ and \Despair.
+
+\section{Tables}
+
+Tables are easy to use with the \verb|GenesysTable| environment.
+
+\begin{GenesysTable}{l X}
+Heading & Long Heading\\
+\RowColors
+Table line one & with the second column\\
+And here's & the second line, with blue background!
+\end{GenesysTable}
+
+\section{Characters}
+
+When you are making stat blocks for NPCs, be sure to use the \verb|\Characteristics| command which takes 6 arguments, once for each characteristic. Like so:
+
+\vspace{1em}
+
+\Characteristics{1}{3}{2}{2}{2}{2}
+
+\vspace{1em}
+
+Lastly, we have the derived numbers: soak, WT and ST. Use the \verb|\Derived| command, with two arguments?one for the title and the second for the number. For Melee/Ranged defense, we use \verb|\DerivedSplit| with 5 arguments: title, first number, second number, first subtitle and second subtitle. Using \verb|\Derived{Soak}{4}| and \verb|\DerivedSplit{Defense}{2}{0}{Melee}{Ranged}|, for instance, gives us:
+
+\vspace{1em}
+
+\Derived{Soak}{4}\qquad\DerivedSplit{Defense}{2}{0}{Melee}{Ranged}
+
+
+
+\end{document}
