@@ -1,0 +1,29 @@
+%%%%%
+% Default table setup
+%%%%%
+
+
+
+\newcommand\HeadRow{\rowfont{\noindent\sffamily\bfseries\color{white}}\rowcolor{tablegold}}
+\newcommand\RowColors{\taburowcolors[2] 2{white .. tableblue}}
+
+\newenvironment{GenesysTable}[1]{%
+    \par\vspace*{8pt}\noindent
+    \begin{tabu} to \textwidth {#1}
+    \HeadRow
+  }
+{\end{tabu}}
+
+
+%%%%%
+% Character sheet tables
+%%%%%
+
+\newenvironment{SkillTable}
+{\sffamily\noindent\begin{tabu} to \columnwidth{l c@{} X[c]}%
+General Skills & Career? & Rank \\
+\hline\RowColors}
+{\end{tabu}}
+
+
+\newcommand\Skills[3]{\bfseries #1 & #2 & #3 \\}	

@@ -1,0 +1,76 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{genesys}[2018/01/20 Genesys RPG package v0.1]
+
+
+
+%%%%%
+% Required Packages
+%%%%%
+%\RequirePackage[notmath]{sansmathfonts}
+\RequirePackage[margin=0.5in]{geometry}
+\RequirePackage[dvipsnames, table]{xcolor}
+\RequirePackage{tikz}
+\RequirePackage{eso-pic,graphicx}
+\RequirePackage{enumitem}
+\RequirePackage{multicol}
+\RequirePackage{booktabs}
+\RequirePackage{amssymb}
+\RequirePackage{tabu, booktabs}
+\RequirePackage{fontawesome}
+\RequirePackage{fontspec}
+\RequirePackage[sc]{titlesec}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{tabularx}
+
+\usetikzlibrary{positioning,shapes}
+
+\definecolor{titleblue}{HTML}{21C1F1}
+\definecolor{difficulty}{HTML}{52287E}
+\definecolor{challenge}{HTML}{751317}
+\definecolor{boost}{HTML}{76CDDB}
+\definecolor{ability}{HTML}{46AC4E}
+\definecolor{proficiency}{HTML}{FEF035}
+\definecolor{background}{HTML}{165A87}
+\definecolor{bgblue}{HTML}{145D8A}
+\definecolor{bggold}{HTML}{F6A149}
+\definecolor{tablegold}{HTML}{F59331}
+\definecolor{tableblue}{HTML}{E2F4FC}
+\definecolor{bgred}{HTML}{8F2524}
+
+
+
+
+%%%%%
+% Options
+%%%%%
+
+\DeclareOption{background}{
+\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{genesysbg.png}}
+}%
+
+
+
+\ProcessOptions\relax
+
+
+%%%%%
+% Load other modules
+%%%%%
+
+\RequirePackage{lib/dice}
+\RequirePackage{lib/characters}
+\RequirePackage{lib/tables}
+\RequirePackage{lib/sections}
+
+
+
+
+
+
+
+
+
+
+
+
+\endinput

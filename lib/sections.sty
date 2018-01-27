@@ -1,0 +1,43 @@
+%%%%%
+% New Font
+%%%%%
+
+\RequirePackage{fontspec}
+\setsansfont{Bebas Neue}
+\setmainfont{Crimson}
+
+%%%%%
+%Remove Numbering
+%%%%%
+
+\setcounter{secnumdepth}{-1}
+
+
+%%%%%
+%Section text colours
+%%%%%
+
+\definecolor{title}{RGB}{0, 192, 253}
+
+%%%%%
+% Sectioning commands
+%%%%%
+
+%\titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
+
+\titleformat{\chapter}[display]{\Huge\bfseries\color{title}\scshape}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+\titleformat{\section}{\color{title}\huge\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}{\large\bfseries\color{title}}{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}{\Large\bfseries}{\thesubsubsection}{1em}{}
+
+%\titleformat{\paragraph}[runin]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titleformat{\subparagraph}[runin]{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+%\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+%\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+%\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+%\titlespacing*{\subparagraph}{\parindent}{3.25ex plus 1ex minus .2ex}{1em}

@@ -1,0 +1,64 @@
+%%%%
+% Skill Ranks
+%%%%
+\newcommand\skill[1][0]{\noindent
+\begin{tikzpicture}[baseline=-0.5ex]
+    \tikzstyle{every node}=[signal, signal to=east, draw=gray, minimum height=.9em, minimum width=2mm];
+    \node[fill=\ifnum#1>0 black\else white\fi] (1) {};
+    \node[fill=\ifnum#1>1 black\else white\fi,signal from=west, right=0pt of 1] (2) {};
+    \node[fill=\ifnum#1>2 black\else white\fi,signal from=west, right=0pt of 2] (3)  {};
+    \node[fill=\ifnum#1>3 black\else white\fi,signal from=west, right=0pt of 3] (4) {};
+    \node[fill=\ifnum#1>4 black\else white\fi,signal from=west, signal to=0, right=0pt of 4] (5) {};
+\end{tikzpicture}
+}
+
+%%%%%
+% Characteristics
+%%%%%
+
+
+
+\newcommand\charPart[2]{\noindent
+\begin{tikzpicture}
+\node[shape=chamfered rectangle, draw, fill=bgblue, text depth=-0.25em, text height=1.25em, inner sep=0pt,outer sep=0pt, minimum height=8mm, minimum width=15mm, thick, chamfered rectangle corners={north west, north east}, font=\sffamily\color{white}](label){\uppercase{#1}};
+\node[shape=circle, thick, draw, above=-1em of label, fill=white]{\Large\bfseries #2};
+\end{tikzpicture}
+}
+
+
+\newcommand\Characteristics[6]{
+\noindent\hfill
+\charPart{BRAWN}{#1}~\charPart{AGILITY}{#2}~\charPart{INTELLECT}{#3}~\charPart{CUNNING}{#4}~\charPart{WILLPOWER}{#5}~\charPart{PRESENCE}{#6}%
+\hfill\null}
+
+
+%%%%%
+% Derived stats
+%%%%%
+
+\newcommand\Derived[2]{\noindent
+\begin{tikzpicture}
+\node[chamfered rectangle, draw, thick, inner sep=0mm, chamfered rectangle corners={south west, south east}] (named) {
+\tikz\node[
+label={[chamfered rectangle, draw, fill=bgred, thick, inner sep=0mm, chamfered rectangle corners={south west, south east}, font=\sffamily\color{white}, minimum height=4mm, minimum width=22mm]above: \uppercase{#1}}] (inner) {\bfseries\Large #2};
+};
+\node[below=-0.2em of named, font=\tiny](labels) {\hspace{.5em}\uppercase{\phantom{melee\qquad ranged}}};
+\end{tikzpicture}
+}
+
+\newcommand\DerivedSplit[5]{\noindent
+\begin{tikzpicture}\draw[ultra thick] (inner.north) -- (named.south);
+\node[chamfered rectangle, draw, thick, inner sep=0mm, chamfered rectangle corners={south west, south east}] (named) {
+\tikz\node[label={[chamfered rectangle, draw, thick, fill=bgred, inner sep=0mm, chamfered rectangle corners={south west, south east}, font=\sffamily\color{white}, minimum height=4mm, minimum width=22mm]above:#1}] (inner) {\Large\bfseries #2\qquad#3};
+};
+\node[below=-0.2em of named, font=\tiny](labels) {\hspace{.5em}\uppercase{#4 \qquad #5}};
+\end{tikzpicture}
+}
+
+
+
+
+
+
+
+
