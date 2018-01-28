@@ -18,7 +18,7 @@ There are two font families in the `/lib/fonts` directory that this package uses
 
 In order to make use of this package you need to add `\usepackage{Genesys}` in your preamble.
 
-Right now there is only one option, `\[background\]`, that adds the background image. By default it's hidden.
+Right now there is only one option, `[background]`, that adds the background image. By default it's hidden.
 
 ## Package Commands ##
 
