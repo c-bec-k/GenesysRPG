@@ -53,7 +53,12 @@
 % Misc sectional commands
 %%%%%
 
-\newcommand\Talent[1]{\bfseries\LARGE\sffamily\color{talent}#1}
+\newcommand\Talent[4]{\vspace{1.5em}
+\noindent{\LARGE\sffamily\color{talent}#1}\\
+\textbf{Tier:} #2\\
+\textbf{Activation:} #3\\
+\textbf{Ranked:} #4\\
+}
 \newcommand\Concept[1]{\bfseries\LARGE\sffamily\color{concept}#1}
 
 
