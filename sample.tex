@@ -1,7 +1,7 @@
-\documentclass[11pt]{book}
+\documentclass{book}
 
 \usepackage[background]{Genesys}
-
+\geometry{paperheight=12.5in}
 \begin{document}
 
 \chapter{Sample Document}
@@ -10,7 +10,9 @@ This is a sample document for the \emph{Genesys} \LaTeX package. Please see belo
 
 \section{Dice}
 
-All dice types have their own commands:
+All dice types and symbols have their own commands:
+
+\begin{multicols}{2}
 
 \begin{itemize}[noitemsep,nolistsep]
 \item \verb|\BoostDie| produces \BoostDie
@@ -19,11 +21,15 @@ All dice types have their own commands:
 \item \verb|\SetbackDie| produces \SetbackDie
 \item \verb|\DifficultyDie| produces \DifficultyDie
 \item \verb|\ChallengeDie| produces \ChallengeDie
+\item \verb|\Advantage| produces \Advantage
+\item \verb|\Success| produces \Success
+\item \verb|\Triumph| produces \Triumph
+\item \verb|\Threat| produces \Threat
+\item \verb|\Failure| produces \Failure
+\item \verb|\Despair| produces \Despair
 \end{itemize}
 
-\vspace{1em}
-
-And we all know that \BoostDie\AbilityDie\ and \ProficiencyDie give us good symbols: \Advantage\Success\ and \Triumph. Sadly, bad dice give us the negative symbols: \Threat\Failure\ and \Despair.
+\end{multicols}
 
 \section{Tables}
 
@@ -38,7 +44,7 @@ And here's & the second line, with blue background!
 
 \section{Characters}
 
-When you are making stat blocks for NPCs, be sure to use the \verb|\Characteristics| command which takes 6 arguments, once for each characteristic. Like so:
+When you are making stat blocks for NPCs, be sure to use the \verb|\Characteristics| command which takes 6 arguments, once for each characteristic. \verb|\Characteristics{1}{3}{2}{2}{2}{2}| grants:
 
 \vspace{1em}
 
@@ -46,11 +52,20 @@ When you are making stat blocks for NPCs, be sure to use the \verb|\Characterist
 
 \vspace{1em}
 
+
 Lastly, we have the derived numbers: soak, WT and ST. Use the \verb|\Derived| command, with two arguments?one for the title and the second for the number. For Melee/Ranged defense, we use \verb|\DerivedSplit| with 5 arguments: title, first number, second number, first subtitle and second subtitle. Using \verb|\Derived{Soak}{4}| and \verb|\DerivedSplit{Defense}{2}{0}{Melee}{Ranged}|, for instance, gives us:
 
 \vspace{1em}
 
-\Derived{Soak}{4}\qquad\DerivedSplit{Defense}{2}{0}{Melee}{Ranged}
+\hspace*{\fill}\Derived{Soak}{4}\qquad\DerivedSplit{Defense}{2}{0}{Melee}{Ranged}\hspace*{\fill}
+
+\section{Talents}
+
+There is now a \verb|\Talent| command that takes 4 arguments. \verb|\Talent{talent name}{tier}{activation}{ranked?}|. 
+
+\verb|\Talent{Grit}{1}{Passive}{Yes}| would give you: 
+
+\Talent{Grit}{1}{Passive}{Yes}
 
 
 
