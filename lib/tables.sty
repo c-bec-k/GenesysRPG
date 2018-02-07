@@ -5,10 +5,10 @@
 
 
 \newcommand\HeadRow{\rowfont{\noindent\sffamily\bfseries\color{white}}\rowcolor{tablegold}}
-\newcommand\RowColors{\taburowcolors[2] 2{white .. tableblue}}
+\newcommand\RowColors{\rowcolors{2}{white}{tableblue}}
 
 \newenvironment{GenesysTable}[1]{%
-    \par\vspace*{8pt}\noindent
+    \par\vspace*{8pt}\noindent\RowColors
     \begin{tabu} to \textwidth {#1}
     \HeadRow
   }
@@ -26,4 +26,4 @@ General Skills & Career? & Rank \\
 {\end{tabu}}
 
 
-\newcommand\Skills[3]{\bfseries #1 & #2 & #3 \\}	
+\newcommand\Skills[3]{\bfseries #1 & #2 & #3 \\}
