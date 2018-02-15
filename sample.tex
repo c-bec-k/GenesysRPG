@@ -1,7 +1,7 @@
 \documentclass{book}
 
 \usepackage[background]{Genesys}
-\geometry{paperheight=12.5in}
+\geometry{paperheight=13in}
 \begin{document}
 
 \chapter{Sample Document}
@@ -33,14 +33,17 @@ All dice types and symbols have their own commands:
 
 \section{Tables}
 
-Tables are easy to use with the \verb|GenesysTable| environment.
+Tables are easy to use with the \verb|GenesysTable| environment. If you're using the \verb|\begin{table}| command to add a \verb|\caption{}| to the table that you add the \verb|[H]| optional argument or else the table will float to the nearest open space (the \verb|\begin{table}[H]| tells \LaTeX\ to put the table \textbf{right here}).
 
+\begin{table}[H]
+\caption{Sample Table}
 \begin{GenesysTable}{l X}
 Heading & Long Heading\\
-\RowColors
-Table line one & with the second column\\
-And here's & the second line, with blue background!
+Table line one & with the second column in blue!\\
+And here's & the second line, with white background!\\
+Last line & again in blue\\
 \end{GenesysTable}
+\end{table}
 
 \section{Characters}
 
