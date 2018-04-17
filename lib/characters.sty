@@ -58,7 +58,20 @@ label={[chamfered rectangle, draw, fill=bgred, thick, inner sep=0mm, chamfered r
 
 
 
+%%%%%
+% Vehicle Stat Line
+%%%%%
 
+\newcommand\Vehicle[7]{\noindent\begin{minipage}[c]{.47\linewidth} % Sil, Speed, Handling, Def, Armor, HTT, STT
+\vspace*{-2em}
+\charPart{Silhouette}{#1}\quad\charPart{Max Speed}{#2}\quad\charPart{Handling}{#3}
 
+\end{minipage}\hfill\noindent\begin{minipage}[c]{.47\linewidth}
+
+\Derived{Defense}{#4} \Derived{Armor}{#5}
+
+\Derived{HT Threshold}{#6} \Derived{SS Threshold}{#7}
+\end{minipage}
+}
 
 
