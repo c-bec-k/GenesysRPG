@@ -28,6 +28,16 @@
 \tikz \draw[transform canvas={yshift=-0.2em}] node[shape=regular polygon,  regular polygon sides=6, draw, ultra thick, fill=challenge, inner sep=0mm, minimum size=1em]{};
 }
 
+%%%%%
+% Multiple Dice At Once
+%%%%%
+
+\newcommand\Black[1][1]{\foreach \x in {1,...,#1} {\SetbackDie}}
+\newcommand\Blue[1][1]{\foreach \x in {1,...,#1} {\BoostDie}}
+\newcommand\Green[1][1]{\foreach \x in {1,...,#1} {\AbilityDie}}
+\newcommand\Purple[1][1]{\foreach \x in {1,...,#1} {\DifficultyDie}}
+\newcommand\Yellow[1][1]{\foreach \x in {1,...,#1} {\ProficiencyDie}}
+\newcommand\Red[1][1]{\foreach \x in {1,...,#1} {\ChallengeDie}}
 
 
 %%%%%
