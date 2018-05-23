@@ -20,8 +20,8 @@
 
 \newcommand\charPart[2]{\noindent
 \begin{tikzpicture}
-\node[shape=chamfered rectangle, draw, fill=bgblue, text depth=-0.25em, text height=1.25em, inner sep=0pt,outer sep=0pt, minimum height=8mm, minimum width=15mm, thick, chamfered rectangle corners={north west, north east}, font=\sffamily\color{white}](label){\uppercase{#1}};
-\node[shape=circle, thick, draw, above=-1em of label, fill=white]{\Large\bfseries #2};
+\node[shape=chamfered rectangle, draw, fill=bgblue, text depth=-0.25em, text height=1.25em, inner sep=0pt,outer sep=0pt, minimum height=8mm, minimum width=12mm, thick, chamfered rectangle corners={north west, north east}, font=\sffamily\color{white}](label){\uppercase{#1}};
+\node[shape=circle, thick, draw, above=-1em of label, fill=white]{\large\bfseries #2};
 \end{tikzpicture}
 }
 
@@ -40,7 +40,7 @@
 \begin{tikzpicture}
 \node[chamfered rectangle, draw, thick, inner sep=0mm, chamfered rectangle corners={south west, south east}] (named) {
 \tikz\node[
-label={[chamfered rectangle, draw, fill=bgred, thick, inner sep=0mm, chamfered rectangle corners={south west, south east}, font=\sffamily\color{white}, minimum height=4mm, minimum width=22mm]above: \uppercase{#1}}] (inner) {\bfseries\Large #2};
+label={[chamfered rectangle, draw, fill=bgred, thick, inner sep=0mm, chamfered rectangle corners={south west, south east}, font=\sffamily\color{white}, minimum height=4mm, minimum width=17mm]above: \uppercase{#1}}] (inner) {\bfseries\Large #2};
 };
 \node[below=-0.2em of named, font=\tiny](labels) {\hspace{.5em}\uppercase{\phantom{melee\qquad ranged}}};
 \end{tikzpicture}
